@@ -12,6 +12,7 @@
 12. credit_paid_state
 13. credit_pending_state
 14. credit_show
+15. event_replay instructions not showing up
 
 card_update 'meta' fields need to be fixed, when
 I try to symbolize the strings, it causes errors

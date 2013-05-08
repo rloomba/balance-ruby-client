@@ -6,7 +6,7 @@ parsed_data = JSON.parse(data_file)
 # puts parsed_data['account_add_card']['metadata']
 Dir.chdir("./scenarios")
 # subdir_list = Dir["*"].reject { |o| not File.directory?(o) }
-subdir_list = ['event_list']
+subdir_list = ['refund_update']
 
 subdir_list.each do |scenario|
   boiler_plate = "require 'balanced'\nBalanced.configure('03921a2cb69311e28b89026ba7c1aba6')\n"
