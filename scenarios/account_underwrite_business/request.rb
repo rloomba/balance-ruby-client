@@ -1,10 +1,9 @@
 <%= boiler_plate %>
 
 merchant_data = {
-  <%="".tap { |s| payload['merchant'].each {|k, v| s << ":#{k} => '#{v}'," unless k = 'person'} %>
+  <%="".tap { |s| payload['merchant'].each {|k, v| s << ":#{k} => '#{v}'," unless k == 'person'} }%>
   :person => {
-    <%="".tap { |s| payload['merchant']['person'].each {|k, v| s << ":#{k} => '#{v}',"} %>
-  % for k, v in payload['merchant']['person'].each% endfor
+      <%="".tap { |s| payload['merchant']['person'].each {|k, v| s << ":#{k} => '#{v}',"} }%>
   }
 }
 account = Balanced::Marketplace.my_marketplace.create_account

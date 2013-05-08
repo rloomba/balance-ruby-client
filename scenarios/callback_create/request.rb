@@ -1,6 +1,4 @@
 <%= boiler_plate %>
 callback = Balanced::Callback.new(
-    %m for k, v in payload.iteritems():
-        :${k} => '${v}',
-    % endfor
+  <%= "".tap { |s| payload.each {|k, v| s << ":#{k} => '#{v}'," } } %>
     ).save

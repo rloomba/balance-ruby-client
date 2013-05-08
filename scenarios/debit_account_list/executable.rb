@@ -2,4 +2,4 @@ require 'balanced'
 Balanced.configure('03921a2cb69311e28b89026ba7c1aba6')
 
 account = Balanced::Account.find('/v1/marketplaces/TEST-MP1PM7wJyQTyV8EmEKKaxDom/accounts/AC3ZKahk43N26zlxDLybrEMg')
-account.add_bank_account("/v1/bank_accounts/BA4aX8D0cax5CsNc4Cb1cmvM")
+debits = account.debits
